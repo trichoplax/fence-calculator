@@ -9,8 +9,8 @@ require_once('php/functions.php')
 
 <form action="index.php" method="post">
     Required fence length: <input type="number" name="length" required>
-    <input type="submit">
-</form>
+    <input type="submit" name="submit">
+</form><br>
 
 <?php echo messageToUser() ?>
 

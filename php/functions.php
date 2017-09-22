@@ -15,12 +15,15 @@ function requirements($length)
     $posts = $railings + 1;
     $total = $railings * RAILING_LENGTH + $posts * POST_WIDTH;
     $overshoot = $total - $length;
-    $returnText = '';
-    $returnText .= 'You will require ' . $posts . ' posts and ' . $railings . ' railings.';
-    $returnText .= 'This will give a fence of length ' . $total . ' metres.';
+    $returnText = "";
+    $returnText .= "For a fence of length " . $length . " metres, ";
+    $returnText .= "you will require " . $posts . " posts and " . $railings . " railings.<br>";
+    $returnText .= 'This will give a fence of length ' . $total . ' metres';
     if ($overshoot > 0)
     {
-        $returnText .= 'This is ' . $overshoot . ' metres longer than required.';
+        $returnText .= ', ' . $overshoot . ' metres longer than required.';
+    } else {
+        $returnText .= '.';
     }
     return $returnText;
 }
