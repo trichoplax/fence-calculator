@@ -61,7 +61,8 @@ function messageFromLength(float $length,
         $returnText = 'You cannot have a negative length fence. ';
         $returnText .= 'We are out of negative length railings.';
     } else {
-        $railings = ceil(($length - $postWidth) / ($postWidth + $railingLength));
+        $railings = max(1,
+            ceil(($length - $postWidth) / ($postWidth + $railingLength)));
         $posts = $railings + 1;
         $total = round($posts * $postWidth + $railings * $railingLength, 2);
         $overshoot = round($total - $length, 2);
