@@ -16,7 +16,7 @@ require_once('php/functions.php')
 
 <form action="index.php" method="post">
     <label for="length">
-        Required fence length: <input type="number" name="length" required><br>
+        Required fence length: <input type="number" step="0.01" name="length" required><br>
     </label>
     <input type="submit" name="length-submit">
 </form>
