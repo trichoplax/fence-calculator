@@ -24,8 +24,8 @@ require_once('php/functions.php')
 <?php
 if (isset($_POST['length-submit'])) {
     echo messageFromLength($_POST['length'],
-        RAILING_LENGTH,
-        POST_WIDTH);
+        POST_WIDTH,
+        RAILING_LENGTH);
 } else {
     echo 'Specify a length, then press "Submit".';
 }?>
