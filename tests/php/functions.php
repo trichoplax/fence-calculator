@@ -12,10 +12,11 @@ class StackTest extends TestCase {
     public function testmessageFromMaterialsFailureOnlyOnePost() {}
     public function testmessageFromMaterialsMalformedPostsAsArray() {}
     public function testmessageFromMaterialsMalformedRailingsAsArray() {}
-    public function testmessageFromMaterialsMalformedPostsNonIntegerFloat() {}
-    public function testmessageFromMaterialsMalformedRailingsNonIntegerFloat() {}
+    public function testmessageFromMaterialsMalformedPostsAsNonIntegerFloat() {}
+    public function testmessageFromMaterialsMalformedRailingsAsNonIntegerFloat() {}
 
-    public function testmessageFromLengthSuccess() {}
-    public function testmessageFromLengthFailure() {}
-    public function testmessageFromLengthMalformed() {}
+    public function testmessageFromLengthSuccessShortLength() {}
+    public function testmessageFromLengthFailureNegativeLength() {}
+    public function testmessageFromLengthFailureZeroLength() {}
+    public function testmessageFromLengthMalformedAsArray() {}
 }
